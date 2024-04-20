@@ -16,12 +16,11 @@ body {
 
 body .main-container {
   display: grid;
-  grid-template-columns: minmax(200px, 250px), minmax(200px, 250px),
-    minmax(200px, 250px), minmax(200px, 250px), minmax(200px, 250px);
-  grid-template-rows: minmax(100px, 150px) minmax(100px, 150px),
-    minmax(100px, 150px);
-  gap: 25px;
-  margin: 4%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  gap: 15px;
+  margin: 1.5rem 5rem;
   line-height: 1.2em;
 }
 
@@ -30,7 +29,7 @@ img {
 }
 
 .profile {
-  margin: 15px;
+  margin: 10px;
   display: flex;
 }
 
@@ -41,8 +40,8 @@ img {
 }
 
 .content {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 500;
   margin: 10px;
 }
 
@@ -53,11 +52,11 @@ img {
 }
 
 .article {
-  margin: 20px 10px;
+  margin: 15px 10px;
 }
 
 .Daniel-Clifford {
-  padding: 25px;
+  padding: 10px;
   background-color: hsl(263, 55%, 52%);
   border-radius: 15px;
   grid-column: 1/3;
@@ -68,7 +67,7 @@ img {
 }
 
 .Jonathan-Walters {
-  padding: 25px;
+  padding: 10px;
   background-color: hsl(217, 19%, 35%);
   border-radius: 15px;
   grid-column: 3/4;
@@ -76,7 +75,7 @@ img {
 }
 
 .Jeanette-Harmon {
-  padding: 25px;
+  padding: 10px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 15px;
   grid-column: 1/2;
@@ -84,7 +83,7 @@ img {
 }
 
 .Patrick-Abrams {
-  padding: 25px;
+  padding: 10px;
   background-color: hsl(219, 29%, 14%);
   border-radius: 15px;
   grid-column: 2/4;
@@ -93,7 +92,7 @@ img {
 }
 
 .Kira-Whittle {
-  padding: 25px;
+  padding: 10px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 15px;
   grid-column: 4/5;
@@ -106,27 +105,31 @@ img {
   color: hsl(210, 46%, 95%);
 }
 
+/* Mobile Display */
+
 @media screen and (max-width: 1000px) {
   body {
     overflow: scroll;
   }
+
   body .main-container {
     display: flex;
     flex-direction: column;
     margin: 20px;
   }
-}
 
-.Daniel-Clifford {
-  background-image: url('./images/bg-pattern-quotation.svg');
-  background-repeat: no-repeat;
-  background-position-x: 180px;
-}
-
-/* .attribution {
-    font-size: 11px;
-    text-align: center;
+  .Daniel-Clifford {
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position-x: 180px;
   }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  } */
+}
+/* FRONT-END CHALLENGE */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
